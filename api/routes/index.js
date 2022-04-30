@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import user from './users/index.js'
 
 const routes = express.Router();
 
@@ -13,5 +14,6 @@ routes.use((req, res, next) => {
 	next();
 })
 
+routes.use('/user', user)
 
 export default routes;
